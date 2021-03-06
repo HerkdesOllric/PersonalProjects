@@ -14,7 +14,7 @@ namespace Main
 
         public void BTNStartGame()
         {
-            NpcGenerator.Instance.SpawnAnyNpcGO(CoreFuncts.Pool_Name_NpcType1);
+            NpcGenerator.Instance.SpawnAnyNpcGO(CoreFuncts.NpcType_Ranger);
             StartBTN.SetActive(false);
         }
 

@@ -22,6 +22,11 @@ namespace Main
         public const string Pool_Name_EnemyType2 = "EnemyType2";
         public const string Pool_Name_EnemyType3 = "EnemyType3";
         public const string Pool_Name_EnemyType4 = "EnemyType4";
+
+        
+        public const string NpcType_Ranger = "NpcRanger";
+        public const string NpcType_Mage = "NpcMage";
+        public const string NpcType_Tank = "NpcTank";
     }
 }
 

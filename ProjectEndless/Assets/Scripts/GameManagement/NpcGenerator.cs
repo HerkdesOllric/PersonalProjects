@@ -26,7 +26,7 @@ namespace Main
 
         public List<NpcTypesPool> NpcTypesList;
         public Dictionary<string, Queue<NpcScriptable>> Dic_NpcTypes;
-
+        
         int SpawnedObjectPools;
         [System.Serializable]
         public class NpcTypesPool
@@ -65,6 +65,7 @@ namespace Main
                     {
                         npcScript.BaseScript = npcTypes.NpcAsset;
                         npcAny.transform.parent = toParentObject.transform;
+                        npcAny.tag = npcTypes.NpcTypesPoolTag;
                         toParentObject.transform.position = npcTypes.FirstSpawnPosition.position;
                         StartCoroutine(NpcSpawnHelper(npcAny));
                     }
@@ -92,7 +93,17 @@ namespace Main
             return npcToSpawn;
         }
 
-
+        public void RespawnNpcFromPool(GameObject gameobj)
+        {
+            if (!Dic_ActiveNpcPools.ContainsKey(gameobj.name))
+            {
+                Debug.Log("Coudn't find Npc with " + gameobj.name + " name");
+                return;
+            }
+            gameobj.SetActive(true);
+            gameobj.GetComponent<INpcInterface>().OnRespawn();
+            Dic_ActiveNpcPools[gameobj.tag].Enqueue(gameobj);
+        } 
 
 
         IEnumerator NpcSpawnHelper(GameObject obj)

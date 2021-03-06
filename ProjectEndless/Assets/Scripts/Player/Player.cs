@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Base.Game.Signal;
 using System;
-using UnityEngine.InputSystem;
 namespace Main
 {
     public class Player : InputManager
@@ -44,7 +43,7 @@ namespace Main
 
         public override void OnSingleTap()
         {
-            DamageEnemy(500);
+            DamageEnemy(100);
         }
 
         #endregion
@@ -53,13 +52,13 @@ namespace Main
 
         public void DamageEnemy()
         {
-
-            EnemyMainScript.TakeDamage(15);
+            if (EnemyMainScript != null)
+                EnemyMainScript.TakeDamage(15);
         }
 
         public void DamageEnemy(float damage)
         {
-
+            if(EnemyMainScript != null)
             EnemyMainScript.TakeDamage(damage);
         }
 

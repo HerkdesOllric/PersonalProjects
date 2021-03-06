@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999926a1a6a0dcd469b02110a5ae205a, type: 3}
-  m_Name: NpcScriptableObject
+  m_Name: NpcMage
   m_EditorClassIdentifier: 
   NpcPrefab: {fileID: 4901755381922339309, guid: a2447eedb3831c9459119c7a2d3689ca,
     type: 3}
-  NpcName: NpcType1
+  NpcName: NpcMage
   NpcLevel: 1
-  NpcBaseHealth: 50
-  NpcBaseDamage: 10
-  NpcClass: 0
+  NpcBaseHealth: 20
+  NpcBaseDamage: 15
+  NpcClass: 1
   HealthDistance: 0
   DamageDistance: 0

@@ -448,7 +448,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcTypesList:
-  - NpcTypesPoolTag: NpcType1
+  - NpcTypesPoolTag: NpcRanger
+    NpcAsset: {fileID: 11400000, guid: d58fe9b70f405ef408929cb9093e17b6, type: 2}
+    NpcPoolCount: 1
+    FirstSpawnPosition: {fileID: 142957708}
+  - NpcTypesPoolTag: NpcMage
+    NpcAsset: {fileID: 11400000, guid: 94ec8675a926e86499b82f305433da91, type: 2}
+    NpcPoolCount: 1
+    FirstSpawnPosition: {fileID: 142957708}
+  - NpcTypesPoolTag: NpcTank
     NpcAsset: {fileID: 11400000, guid: 74e5f3e43a8e52b4190731c99da0e88e, type: 2}
     NpcPoolCount: 1
     FirstSpawnPosition: {fileID: 142957708}
